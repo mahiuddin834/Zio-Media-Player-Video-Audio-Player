@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#471F51">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Alen Walker new Sond"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="Alen Walker new Sond"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/albumDiskImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="300dp"
+            android:layout_marginTop="35dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/albumArt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_splash"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/equalizerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_equalizer"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/speedCtrlBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_speed"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_equalizer"
+                android:padding="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_equalizer"
+                android:padding="5dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <TextView
+                android:id="@+id/durationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                />
+        </RelativeLayout>
+
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:thumb="@drawable/seek_thumb"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/repeatBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/previewsBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/previewsBtn"
+               android:src="@drawable/ic_repeat_24"/>
+
+            <ImageView
+                android:id="@+id/previewsBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/playPauseBtn"
+                app:layout_constraintEnd_toStartOf="@+id/playPauseBtn"
+                app:layout_constraintTop_toTopOf="@+id/playPauseBtn"
+                android:src="@drawable/ic_skip_previous_24" />
+
+            <ImageView
+                android:id="@+id/playPauseBtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_play_circle_outline_24"/>
+
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/playPauseBtn"
+                app:layout_constraintStart_toEndOf="@+id/playPauseBtn"
+                app:layout_constraintTop_toTopOf="@+id/playPauseBtn"
+                app:srcCompat="@drawable/ic_skip_next" />
+
+            <ImageView
+                android:id="@+id/playListBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/nextBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nextBtn"
+                app:srcCompat="@drawable/ic_playlist" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+
+        />
+
+
+
+    <!-- Top Bar with Playing Now -->
+
+
+</RelativeLayout>
